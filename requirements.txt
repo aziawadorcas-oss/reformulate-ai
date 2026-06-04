@@ -1,6 +1,5 @@
 streamlit
 sentence-transformers
-chromadb==0.5.0
 pandas
 google-genai
-numpy==1.26.4
+scikit-learn
