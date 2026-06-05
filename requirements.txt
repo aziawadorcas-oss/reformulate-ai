@@ -3,3 +3,4 @@ sentence-transformers
 pandas
 google-genai
 scikit-learn
+torchvision
