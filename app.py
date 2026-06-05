@@ -11,8 +11,8 @@ st.set_page_config(
     layout="centered"
 )
 
-st.markdown("""
-<style>
+with open("style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 .main-header {font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px;}
 .sub-header {font-size: 15px; color: #666; margin-bottom: 2rem;}
 .result-box {background: #f0f7eb; border-left: 4px solid #3b6d11; padding: 1rem; border-radius: 8px; margin-top: 1rem;}
