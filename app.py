@@ -31,7 +31,11 @@ with col2:
 
 with st.sidebar:
     st.markdown("### Settings")
-    api_key = st.text_input("Gemini API Key", type="password", placeholder="Paste your API key")
+    if "GEMINI_API_KEY" in st.secrets:
+        api_key = st.secrets["GEMINI_API_KEY"]
+        st.success("✅ API Connected")
+    else:
+        api_key = st.text_input("Gemini API Key", type="password", placeholder="Paste your API key")
     st.markdown("---")
     st.markdown("### About")
     st.markdown("""
